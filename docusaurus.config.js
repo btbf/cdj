@@ -5,11 +5,13 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+const lightTheme = prismThemes.github;
+const darkTheme = prismThemes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Cardano Developers Japan',
+  tagline: 'カルダノジャパン開発者ポータルサイト',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -20,8 +22,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Cardano Developers Japan', // 通常は、GitHub 組織/ユーザー名です。
+  projectName: 'Cardano Developers Japan', // 通常はリポジトリ名です。
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -66,9 +68,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Cardano Developers Japan',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Cardano Developers Japan Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -80,7 +82,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/btbf/cdj',
             label: 'GitHub',
             position: 'right',
           },
@@ -94,7 +96,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/overview',
               },
             ],
           },
@@ -102,15 +104,11 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/sFZuV7m3X3',
               },
               {
-                label: 'Twitter',
+                label: 'X (Twitter)',
                 href: 'https://twitter.com/docusaurus',
               },
             ],
@@ -124,14 +122,15 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/btbf/cdj',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © 2023-${new Date().getFullYear()} Cardano Developers Japan`,
       },
       prism: {
+        additionalLanguages: ['json'],
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
